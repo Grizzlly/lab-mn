@@ -1,14 +1,14 @@
 
 A = [1 -1 1 2; 1 3 3 3; -1 -1 5 4; 1 2 3 5; 2 4 6 7];
 
-[m, n] = size(A);
+[m n] = size(A);
 
 Q = eye(m);
 
 for i = 1 : min(m - 1, n)
   v = zeros(m, 1);
 
-  v(i : m, 1) = A(i : m, i);
+  v(i : m) = A(i : m, i);
   v(i) += sign(v(i)) * norm(v);
 
   v = v / norm(v);
@@ -34,3 +34,4 @@ disp(Q);
 disp(A);
 disp(Q * A);
 disp(Q * Q');
+

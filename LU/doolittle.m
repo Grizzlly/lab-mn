@@ -10,6 +10,7 @@ for p = 1 : n
   for i = p : n
     U(p, i) = A(p, i) - L(p, 1 : i) * U(1 : i, i);
   endfor
+
   for i = p + 1 : n
     L(i, p) = (A(i, p) - L(i, 1 : p) * U(1 : p, p)) / U(p, p);
   endfor
