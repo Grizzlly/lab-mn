@@ -10,7 +10,7 @@ allP = eye(n);
 
 for p = 1 : n - 1
   % PIVOTARE PARTIALA
-  [~ idx] = max(abs(A(p : end, p)));
+  [~, idx] = max(abs(A(p : end, p)));
 
   % Scalare
   % scales = max(abs(A(p : end, p : end)), [], 2);
